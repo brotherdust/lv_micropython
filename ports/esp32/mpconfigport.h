@@ -11,6 +11,9 @@
 #include "rom/ets_sys.h"
 #endif
 
+// Some custom memory adjustments to make it so the WiFi stack and LVGL will play nice
+#define MICROPY_STACKLESS                   (1)
+
 // object representation and NLR handling
 #define MICROPY_OBJ_REPR                    (MICROPY_OBJ_REPR_A)
 #define MICROPY_NLR_SETJMP                  (1)
