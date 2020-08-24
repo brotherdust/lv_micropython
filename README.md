@@ -1,4 +1,10 @@
-# Micropython + lvgl
+# Micropython + lvgl for M5Stack Core (16MB Flash)
+
+This branch contains my modifications to lv_micropython to make it work well with M5Stack Core.
+
+It also includes:
+
+- todo: Various bits of code from Lobo's MPy port
 
 **For information abound Micropython lvgl bindings please refrer to [lv_bindings/README.md](https://github.com/littlevgl/lv_bindings/blob/master/README.md)**
 
