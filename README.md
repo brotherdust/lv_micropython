@@ -24,9 +24,7 @@ This follows the [Micropython ESP32 README](https://github.com/micropython/micro
 $ export ESP32_DEV_PREFIX=$HOME/esp32-dev
 $ export MPY_DIR=$ESP32_DEV_PREFIX/lv_micropython
 $ mkdir -p $MPY_DIR
-$ git clone --recurse-submodules --remote-submodules https://github.com/lv_micropython $MPY_DIR
-$ cd $MPY_DIR
-$ git checkout m5stack-changes
+$ git clone -b m5stack-changes --single-branch --recurse-submodules --remote-submodules https://github.com/brotherdust/lv_micropython $MPY_DIR
 $ cd $ESP32_DEV_PREFIX
 ```
 
@@ -34,12 +32,9 @@ $ cd $ESP32_DEV_PREFIX
 
 ```bash
 $ export ESPIDF=$ESP32_DEV_PREFIX/src/github.com/espressif/esp-idf
-$ export IDF_COMMIT_HASH=4c81978a3e2220674a432a588292a4c860eef27b # As of 2020/08/24
 $ mkdir -p $ESPIDF
 $ cd $ESPIDF
-$ git clone --recurse-submodules --remote-submodules https://github.com/espressif/esp-idf.git $ESPIDF
-$ git checkout $IDF_COMMIT_HASH
-$ git submodule update --init --recursive
+$ git clone -b v4.0.1 --single-branch --recurse-submodules --remote-submodules https://github.com/espressif/esp-idf.git $ESPIDF
 ```
 
 ### Stage 3: Compile-Ready
