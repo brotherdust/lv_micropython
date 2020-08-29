@@ -55,7 +55,18 @@ $ . ./export.sh
 ```bash
 $ cd $MPY_DIR
 $ make -C mpy-cross
+```
+
+#### M5Stack Core (4MiB flash)
+
+```bash
 $ make -C ports/esp32 BOARD=M5STACK_CORE
+```
+
+#### M5Stack Grey (16MiB flash)
+
+```bash
+$ make -C ports/esp32 BOARD=M5STACK_GREY
 ```
 
 ### Environment Reset

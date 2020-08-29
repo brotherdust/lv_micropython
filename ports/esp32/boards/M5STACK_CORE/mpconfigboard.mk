@@ -1,0 +1,4 @@
+PART_SRC = partitions-4MiB.csv
+SDKCONFIG += boards/M5STACK/sdkconfig
+LV_CFLAGS += -DLV_COLOR_DEPTH=16
+LV_CFLAGS += -DLV_COLOR_16_SWAP=1
