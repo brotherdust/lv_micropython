@@ -24,7 +24,10 @@ This follows the [Micropython ESP32 README](https://github.com/micropython/micro
 $ export ESP32_DEV_PREFIX=$HOME/esp32-dev
 $ export MPY_DIR=$ESP32_DEV_PREFIX/lv_micropython
 $ mkdir -p $MPY_DIR
-$ git clone -b m5stack-changes --single-branch --recurse-submodules --remote-submodules https://github.com/brotherdust/lv_micropython $MPY_DIR
+$ git clone https://github.com/brotherdust/lv_micropython $MPY_DIR
+$ cd $MPY_DIR
+$ git checkout m5stack-changes
+$ git submodule update --init --recursive
 $ cd $ESP32_DEV_PREFIX
 ```
 
@@ -34,7 +37,9 @@ $ cd $ESP32_DEV_PREFIX
 $ export ESPIDF=$ESP32_DEV_PREFIX/src/github.com/espressif/esp-idf
 $ mkdir -p $ESPIDF
 $ cd $ESPIDF
-$ git clone -b v4.0.1 --single-branch --recurse-submodules --remote-submodules https://github.com/espressif/esp-idf.git $ESPIDF
+$ git clone https://github.com/espressif/esp-idf.git $ESPIDF
+$ git checkout v4.0.1
+$ git submodule update --init --recursive
 ```
 
 ### Stage 3: Compile-Ready
@@ -44,6 +49,7 @@ $ cd $MPY_DIR/ports/esp32
 $ python3 -m venv build-venv
 $ source build-venv/bin/activate
 $ pip install --upgrade pip
+$ pip install virtualenv
 $ pip install -r $ESPIDF/requirements.txt
 $ cd $ESPIDF
 $ ./install.sh
