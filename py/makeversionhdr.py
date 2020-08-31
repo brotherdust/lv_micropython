@@ -73,10 +73,13 @@ def get_version_info_from_docs_conf():
 
 
 def make_version_header(filename):
+    # Git tags aren't all that reliable in this context. We'll use docs instead.
+    info = get_version_info_from_docs_conf()
+
     # Get version info using git, with fallback to docs/conf.py
-    info = get_version_info_from_git()
-    if info is None:
-        info = get_version_info_from_docs_conf()
+    # info = get_version_info_from_git()
+    # if info is None:
+    #     info = get_version_info_from_docs_conf()
 
     git_tag, git_hash = info
 
