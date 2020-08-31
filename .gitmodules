@@ -39,3 +39,6 @@
 [submodule "lib/nxp_driver"]
 	path = lib/nxp_driver
 	url = https://github.com/hathach/nxp_driver.git
+[submodule "lib/Micropython-Editor"]
+	path = lib/Micropython-Editor
+	url = https://github.com/robert-hh/Micropython-Editor.git
